@@ -1,0 +1,89 @@
+@import "./mixins";
+
+
+.navbar {
+    @include flexContainer(row);
+    background-color: transparent;
+    position: absolute; /* To position it over the banner */
+    z-index: 10;
+    top: 0;
+    width: clamp(400px, 100%, 1920px);
+    height: 10%;
+
+    a:first-child {
+        margin-right: auto;
+    }
+
+    .logo {
+        height: 100% !important;
+        margin-right: auto;
+    }
+    
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0 0.5rem;
+        padding: clamp(0rem, 0.5rem, 0.5rem);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: yellow;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        a {
+            margin: 0 0.1rem; /* Adjust margin for smaller screens */
+            font-size: 0.7rem;
+        }
+
+
+        .logo {
+            height: 100% !important;
+            width: 100%;
+            margin-right: auto;
+        }
+        
+    }
+
+    @media screen and (max-width: 450px) {
+
+        .navbar{
+            padding: 0 50px; /* Add some padding to the sides to prevent elements from sticking to the edges */
+            width: 100%; /* Ensure the navbar spans the full width of the screen */
+            height: auto; /* Adjust height automatically */
+            overflow-x: none;
+        }
+
+        a {
+            margin: 0; /* Remove margin */
+            font-size: 0.5rem;
+            padding: 0.5rem 0.5rem; /* Adjust padding for better spacing */
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+
+
+            &first-child{
+                margin-right: 0;
+            }
+
+        }
+
+     
+        
+        
+
+        .logo {
+            height: 20px !important;
+            width: auto;
+            margin-right: auto; //fix this
+        }
+        
+    }
+
+}
