@@ -1,10 +1,22 @@
 .banner {
   display: grid;
   place-items: center;
+  justify-content: center;
   height: 500px; /* Set your desired height */
   position: relative; /* To position its children elements */
   background-color: transparent;
   width: clamp(200px, 100%, 1920px);
+}
+.banner .banner-controls {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  z-index: 4;
+  width: 350px;
+  bottom: 0;
+  margin-bottom: 20px;
+  margin-left: auto;
+  justify-content: space-evenly;
 }
 .banner .media-item {
   width: 100%;
@@ -18,6 +30,52 @@
 }
 .banner .logo {
   height: 200px;
+}
+.banner .banner-content {
+  height: 30%;
+  width: 80%;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+}
+.banner .banner-content #banner-msg {
+  margin-bottom: 10px;
+}
+.banner .banner-social-media {
+  height: 30%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+}
+.banner .banner-text {
+  text-align: left;
+  color: white; /* Adjust the text color */
+  width: 100%;
+  z-index: 3; /* Ensure it's above the image and overlay */
+}
+.banner .banner-text h2 {
+  font-size: 1.55rem; /* Adjust the font size */
+  margin: 0;
+  padding: 0;
+}
+.banner .banner-text #status {
+  color: #D82E3B !important;
+}
+.banner .banner-text .apply-button {
+  background-color: #D82E3B;
+  color: white;
+  border: 1px solid #D82E3B;
+  width: 200px;
+  font-size: 1.5rem;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 12.5px;
+}
+.banner .banner-text .apply-button:hover {
+  background-color: #87242c;
 }
 
 body {
@@ -38,22 +96,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
-  opacity: 0.5; /* Adjust the overlay opacity */
+  background-color: #212121;
+  opacity: 0.7; /* Adjust the overlay opacity */
   z-index: 2; /* Ensure it's above the image and below text */
 }
 
 /* Banner text styles */
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white; /* Adjust the text color */
-  z-index: 3; /* Ensure it's above the image and overlay */
-}
-
 @media screen and (max-width: 767px) {
   .banner-text {
     font-size: 1rem; /* Adjust the font size for smaller screens */
@@ -63,6 +111,44 @@ body {
   }
   .banner .media-item {
     height: 400px;
+  }
+  .banner .banner-content {
+    height: 50%;
+    width: 80%;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+  }
+  .banner .banner-social-media {
+    height: 30%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner .banner-text {
+    text-align: center;
+    color: white; /* Adjust the text color */
+    width: 100%;
+    z-index: 3; /* Ensure it's above the image and overlay */
+  }
+  .banner .banner-text h2 {
+    font-size: 1.5rem; /* Adjust the font size */
+    margin: 0;
+    padding: 0;
+  }
+  .banner .banner-text {
+    text-align: center;
+    color: white; /* Adjust the text color */
+    width: 100%;
+    z-index: 3; /* Ensure it's above the image and overlay */
+  }
+  .banner .banner-text h2 {
+    font-size: 1.5rem; /* Adjust the font size */
+    margin: 0;
+    padding: 0;
   }
 }
 @media screen and (max-width: 450px) {
@@ -78,9 +164,9 @@ body {
 }
 @media screen and (max-width: 2240px) {
   .banner {
-    height: 600px;
+    height: 810px;
   }
   .banner .media-item {
-    height: 600px;
+    height: 810px;
   }
 }/*# sourceMappingURL=banner.css.map */

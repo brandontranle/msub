@@ -1,8 +1,23 @@
+@import "./styles/fonts.css/";
+
 #root {
   max-width: 100%;
   max-height: 100%;
   /*margin: 0 auto;*/
   text-align: center;
+}
+
+body {
+  font-family: "Mada-Regular";
+}
+
+a,
+h1,
+h2,
+p,
+button {
+  font-family: "Mada-Bold" !important;
+  text-decoration: none;
 }
 
 .logo {

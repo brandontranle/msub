@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Mada-Regular";
+  src: url("../assets/fonts/Mada-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Mada-Bold";
+  src: url("../assets/fonts/Mada-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Mada-SemiBold";
+  src: url("../assets/fonts/Mada-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Mada-Black";
+  src: url("../assets/fonts/Mada-Black.ttf");
+}
+
+@font-face {
+  font-family: "Mada-ExtraBold";
+  src: url("../assets/fonts/Mada-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Mada-Medium";
+  src: url("../assets/fonts/Mada-Medium.ttf");
+}
