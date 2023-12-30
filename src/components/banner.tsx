@@ -1,13 +1,52 @@
 import Navbar from "./navbar";
-import photo from "../assets/images/msub-photo.jpeg";
-//import logo from "../assets/images/msub-logo.png";
+import photo1 from "../assets/images/msub-photo.jpeg";
+import photo2 from "../assets/images/group-photo1.jpeg";
+import photo3 from "../assets/images/group-photo2.jpeg";
 
-const Banner = () => {
+//import logo from "../assets/images/msub-logo.png";
+import { useState } from "react";
+
+const Banner: React.FC = () => {
+  const mediaItems = [photo1, photo2, photo3]; // Array of media items
+  const [currentItem, setCurrentItem] = useState(0);
+
+  const handlePrev = () => {
+    console.log("previous clicked!");
+    setCurrentItem((prevItem) =>
+      prevItem === 0 ? mediaItems.length - 1 : prevItem - 1
+    );
+  };
+
+  const handleNext = () => {
+    console.log("next clicked!");
+
+    setCurrentItem((prevItem) =>
+      prevItem === mediaItems.length - 1 ? 0 : prevItem + 1
+    );
+  };
+
   return (
     <div className="banner">
       <Navbar />
       <div className="banner-overlay"></div> {/* Add the banner-overlay */}
-      <img src={photo} alt="Banner-Media-Scroller" className="media-item" />
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          overflow: "hidden",
+        }}
+      >
+        {mediaItems.map((url, index) => (
+          <img
+            key={url}
+            src={url}
+            aria-hidden={currentItem !== index}
+            className="media-item"
+            style={{ transform: `translateX(${100 * (index - currentItem)}%)` }}
+          />
+        ))}
+      </div>
       <div className="banner-content">
         <div className="banner-social-media">
           <a href="instagram.com">
@@ -95,6 +134,7 @@ const Banner = () => {
           height="75"
           fill="none"
           viewBox="0 0 121 75"
+          onClick={handlePrev}
         >
           <path
             stroke="#fff"
@@ -110,6 +150,7 @@ const Banner = () => {
           fill="none"
           viewBox="0 0 121 75"
           style={{ transform: "scale(-1,1)" }}
+          onClick={handleNext}
         >
           <path
             stroke="#fff"

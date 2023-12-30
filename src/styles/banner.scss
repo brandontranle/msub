@@ -21,6 +21,18 @@
         margin-left: auto;
         justify-content: space-evenly;
 
+    svg {
+        &:hover{
+            cursor: pointer;
+            //make it translate upon hover
+            //transform: translateY(-5px);
+            z-index: 4;
+            transform: scale(1.1); /* Increase the size on hover for better interaction */
+
+        }
+    }
+
+
     }
 
 
@@ -32,6 +44,16 @@
         top: 0;
         left: 0;
         z-index: 1; /* Ensure it's below the text */
+        display: inline-block;
+  transition: transform 0.75s ease; /* Add transition for smooth animation */
+
+
+
+        &.active{
+            opacity: 1;
+
+        }
+
         //opacity: 0.5; /* Adjust the opacity as desired */
       }
 
