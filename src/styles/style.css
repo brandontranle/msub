@@ -290,4 +290,160 @@ body {
   .banner .media-item {
     height: 810px;
   }
+}
+#about {
+  background-color: #F9F6EE;
+  padding-bottom: 100px;
+}
+#about .flex-row-container {
+  display: flex;
+  flex-direction: row;
+}
+#about .section-content {
+  text-align: left;
+  width: 100%;
+  font-size: 1.25rem;
+  font-family: "Mada-Bold" !important;
+  padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  #about .flex-row-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #about .section-content {
+    font-family: "Mada-Bold" !important;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.photo-card {
+  position: relative;
+  display: inline-block;
+}
+.photo-card:after {
+  content: "";
+  position: absolute;
+  left: 4%;
+  top: 5%;
+  background-color: #D82E3B;
+  width: 85%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 20px;
+}
+.photo-card img {
+  border-radius: 20px;
+  vertical-align: top;
+  width: 85%;
+  height: 75%;
+  position: relative; /* Ensure the image stays on top of the pseudo-element */
+  z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#program {
+  background-color: #F9F6EE;
+  padding-bottom: 100px;
+}
+#program .flex-row-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* Allow flex items to wrap to the next row */
+}
+#program .flex-container-column {
+  width: calc(27% - 50px); /* Calculate width for each card */
+  /* Adjust margin/padding for spacing between cards */
+  margin: 10px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  #program .flex-row-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next row */
+  }
+  #program .flex-container-column {
+    width: 100%; /* Calculate width for each card */
+    /* Adjust margin/padding for spacing between cards */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc; /* Optional: Add border for visualization */
+    box-sizing: border-box;
+  }
+}
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  background-color: #E2E2E2;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, opacity 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* Initial box shadow */
+  border-radius: 25px;
+  border: 1px solid #ccc; /* Optional: Add border for visualization */
+}
+.flex-container-column .info-svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s;
+}
+.flex-container-column .info-title {
+  width: 100%;
+  text-align: center;
+  font-family: "Mada-Bold" !important;
+  color: #D82E3B;
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+.flex-container-column .info-description {
+  width: 100%;
+  text-align: center;
+  font-family: "Mada-Bold" !important;
+  color: #000000;
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+.flex-container-column:hover {
+  background-color: #D82E3B;
+  color: #FFFFFF;
+  border: 1px solid #D82E3B;
+}
+.flex-container-column:hover .info-svg {
+  color: #FFFFFF;
+}
+.flex-container-column:hover .info-title {
+  color: black;
+}
+.flex-container-column:hover .info-description {
+  color: #FFFFFF;
+}
+
+#section-title {
+  text-align: center;
+  font-family: "Mada-Bold" !important;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  color: #D82E3B;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(144, 144, 144, 0.5);
+}
+
+.section-content-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row !important;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

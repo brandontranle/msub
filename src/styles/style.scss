@@ -1,9 +1,28 @@
 @import "./variables";
 @import "./mixins";
 @import "./navbar";
-@import "./banner"  
+@import "./banner"; 
+@import "./about";
+@import "./photocard";
+@import "./program";
+@import "./infocard";
 
+#section-title{
+    text-align: center;
+    font-family: $font;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: $primaryColor;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(144, 144, 144, 0.5);
+}
 
+.section-content-photo{
+    @include flexCenter(row);
+    width: 100%;
+}
 
 
 

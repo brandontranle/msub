@@ -1,0 +1,37 @@
+@import "./mixins";
+@import "./variables";
+
+
+.photo-card {
+    position: relative;
+    display: inline-block;
+
+
+
+        &:after{
+            content: '';
+            position: absolute;
+            left: 4%;
+            top: 5%;
+            background-color: $primaryColor;
+            width: 85%;
+            height: 100%;
+            z-index: 0;
+            border-radius: 20px;
+
+    }
+
+    img{
+        border-radius: 20px;
+        vertical-align: top;
+        width: 85%;
+        height: 75%;
+        position: relative; /* Ensure the image stays on top of the pseudo-element */
+
+        z-index: 2;
+        object-fit: cover;
+    }
+
+
+    
+}

@@ -1,0 +1,66 @@
+@import "./mixins";
+@import "./variables";
+
+.flex-container-column{
+    @include flexContainer(column);
+    //make a glass morphismm background
+    background-color: $tertiaryColor;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, opacity 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* Initial box shadow */
+    border-radius: 25px;
+    border: 1px solid #ccc; /* Optional: Add border for visualization */
+
+
+    .info-svg{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: color 0.3s;
+
+       
+
+    }
+
+    .info-title{
+        width: 100%;
+        text-align: center;
+        font-family: $font;
+        color: $primaryColor;
+        font-size: 1.25rem;
+        transition: color 0.3s;
+
+    }
+
+    .info-description{
+        width: 100%;
+        text-align: center;
+        font-family: $font;
+        color: $textColor;
+        font-size: 1.25rem;
+        transition: color 0.3s;
+
+
+    }
+
+    &:hover{
+        background-color: $primaryColor;
+        color: $secondaryColor;
+        border: 1px solid $primaryColor;
+        .info-svg{
+            color: $secondaryColor;
+        }
+        .info-title{
+            color: black;
+        }
+        .info-description{
+            color: $secondaryColor;
+        }
+    }
+
+
+
+
+    
+}
