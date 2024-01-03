@@ -1,0 +1,52 @@
+@import "../mixins";
+@import "../variables";
+
+#summer-card{
+    @include flexContainer(row);
+    background-color: #F9F6EE;
+    width: 500px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 50px;
+    padding: 10px;
+
+    .info-title{
+        width: 100%;
+        font-family: $font;
+        font-size: 1.25rem;
+        color: $primaryColor;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(144, 144, 144, 0.5);
+    }
+
+
+    .info-description{
+        width: 50%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: $font;
+
+    }
+
+
+
+    
+
+}
+
+@media screen and (max-width: 768px) {
+#summer-card { 
+
+    width: 87%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+    
+}
+}

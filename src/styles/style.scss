@@ -1,11 +1,14 @@
 @import "./variables";
 @import "./mixins";
-@import "./navbar";
-@import "./banner"; 
-@import "./about";
-@import "./photocard";
-@import "./program";
-@import "./infocard";
+@import "./navbar/navbar";
+@import "./banner/banner"; 
+@import "./about/about";
+@import "./photocard/photocard";
+@import "./program/program";
+@import "./infocard/infocard";
+@import "./summer/summer";
+@import "./summer-card/summer-card";
+@import "./photocard-v2/photocardv2";
 
 #section-title{
     text-align: center;
@@ -25,4 +28,8 @@
 }
 
 
-
+@media screen and (max-width: 1100px){
+    #section-title{
+        margin-bottom: 25px;
+    }
+}

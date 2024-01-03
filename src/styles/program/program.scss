@@ -1,10 +1,10 @@
-@import "./mixins";
-@import "./variables";
+@import "../mixins";
+@import "../variables";
 
 
 #program {
     background-color: $backgroundColor;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 
     .flex-row-container{
         @include flexContainer(row);
