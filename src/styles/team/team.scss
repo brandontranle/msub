@@ -1,0 +1,138 @@
+@import "../mixins";
+@import "../variables";
+#team-section {
+    background-color: $quaternaryColor;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    #name{
+        color: $primaryColor;
+        font-weight: 700;
+        font-family: "Mada-Bold";
+    }
+
+    .logo{
+        opacity: 0.1;
+    }
+    
+    .background-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 65%;
+        z-index: 1;
+
+    }
+    .section-title{
+        color: $tertiaryColor;
+
+    }
+
+    h3 {
+        color: black;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-size: 1.35rem;
+    }
+
+    .flex-row-container{
+        @include flexContainer(row);
+        @include flexCenter(row);
+        padding: 25px;
+        
+
+    }
+
+    .flex-column{
+        @include flexContainer(column);
+        @include flexCenter(column);
+        width: 40%;
+        z-index: 2;
+
+        &:after{
+            background-color: white;
+            content: '';
+            position: absolute;
+            width: 27rem;
+            height: 51%;
+            margin-top: 100px;
+            z-index: 1;
+            border-radius: 20px;
+            border: 2px solid $tertiaryColor;
+        }
+
+        &:before{
+            background-color: $primaryColor;
+            content: '';
+            position: absolute;
+            width: 27rem;
+            height: 50%;
+            margin-left: 3%;
+            margin-top: 40px;
+            margin-bottom: 0px;
+            z-index: 0;
+            border-radius: 20px;
+            border: 2px solid $tertiaryColor;
+
+        }
+
+        img {
+            z-index: 2;
+        }
+        
+        h3{
+            z-index: 2;
+        }
+    }
+
+    #coordinator-photo{
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        object-position: 25% 25%;
+        border-radius: 25px;
+        border: 2px solid $primaryColor;
+        border: 2px solid $tertiaryColor;
+
+    }
+
+
+}
+
+@media screen and (max-width: 1150px){
+
+    #team-section {
+
+    .flex-row-container{
+        @include flexContainer(column);
+        @include flexCenter(column);
+        width: 100%;
+    }
+
+    .flex-column {
+        margin-bottom: 30px;
+
+        &:after{
+            display: none;
+        }
+
+        &:before{
+            display: none;
+        }
+
+
+    }
+
+    .logo{
+        display: none;
+    }
+
+    h3{
+        color: $tertiaryColor;
+    }
+
+}
+
+}
