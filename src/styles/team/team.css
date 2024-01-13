@@ -1,17 +1,17 @@
-#team-section {
+#team {
   background-color: #212121;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-#team-section #name {
+#team #name {
   color: #D82E3B;
   font-weight: 700;
   font-family: "Mada-Bold";
 }
-#team-section .logo {
+#team .logo {
   opacity: 0.1;
 }
-#team-section .background-overlay {
+#team .background-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,16 +20,16 @@
   height: 65%;
   z-index: 1;
 }
-#team-section .section-title {
+#team .section-title {
   color: #E2E2E2;
 }
-#team-section h3 {
+#team h3 {
   color: black;
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 1.35rem;
 }
-#team-section .flex-row-container {
+#team .flex-row-container {
   display: flex;
   flex-direction: row;
   display: flex;
@@ -38,7 +38,7 @@
   flex-direction: row !important;
   padding: 25px;
 }
-#team-section .flex-column {
+#team .flex-column {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -48,7 +48,7 @@
   width: 40%;
   z-index: 2;
 }
-#team-section .flex-column:after {
+#team .flex-column:after {
   background-color: white;
   content: "";
   position: absolute;
@@ -59,7 +59,7 @@
   border-radius: 20px;
   border: 2px solid #E2E2E2;
 }
-#team-section .flex-column:before {
+#team .flex-column:before {
   background-color: #D82E3B;
   content: "";
   position: absolute;
@@ -72,13 +72,13 @@
   border-radius: 20px;
   border: 2px solid #E2E2E2;
 }
-#team-section .flex-column img {
+#team .flex-column img {
   z-index: 2;
 }
-#team-section .flex-column h3 {
+#team .flex-column h3 {
   z-index: 2;
 }
-#team-section #coordinator-photo {
+#team #coordinator-photo {
   width: 350px;
   height: 350px;
   -o-object-fit: cover;
@@ -91,7 +91,7 @@
 }
 
 @media screen and (max-width: 1150px) {
-  #team-section .flex-row-container {
+  #team .flex-row-container {
     display: flex;
     flex-direction: column;
     display: flex;
@@ -100,19 +100,19 @@
     flex-direction: column !important;
     width: 100%;
   }
-  #team-section .flex-column {
+  #team .flex-column {
     margin-bottom: 30px;
   }
-  #team-section .flex-column:after {
+  #team .flex-column:after {
     display: none;
   }
-  #team-section .flex-column:before {
+  #team .flex-column:before {
     display: none;
   }
-  #team-section .logo {
+  #team .logo {
     display: none;
   }
-  #team-section h3 {
+  #team h3 {
     color: #E2E2E2;
   }
 }/*# sourceMappingURL=team.css.map */

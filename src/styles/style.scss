@@ -10,6 +10,7 @@
 @import "./summer-card/summer-card";
 @import "./photocard-v2/photocardv2";
 @import "./team/team";
+@import "./footer/footer";
 
 #section-title{
     text-align: center;
@@ -33,4 +34,17 @@
     #section-title{
         margin-bottom: 25px;
     }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.horizontal-line{
+    width: 100%;
+    height: 2px;
+    background-color: $tertiaryColor;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

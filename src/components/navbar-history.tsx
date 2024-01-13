@@ -1,6 +1,4 @@
 import logo from "../assets/images/msub-logo.png";
-import { Link } from "react-router-dom";
-
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -36,9 +34,7 @@ const Navbar = () => {
           </button>
           {showMenu && (
             <div className={`mobile-menu-options ${showMenu ? "show" : ""}`}>
-              <a href="#about">About</a>
-              <a href="#team">Team</a>
-              <a href="#program">Program</a>
+              <a href="/">Home</a>
               <a href="/history">History</a>
               <a href="/resources">Resources</a>
             </div>
@@ -46,11 +42,9 @@ const Navbar = () => {
         </div>
       ) : (
         <div className="desktop-menu">
-          <a href="#about">About</a>
-          <a href="#team">Team</a>
-          <a href="#program">Program</a>
-          <Link to="/history">History</Link>
-          <Link to="/resources">Resources</Link>
+          <a href="/">Home</a>
+          <a href="/history">History</a>
+          <a href="/resources">Resources</a>
         </div>
       )}
     </div>

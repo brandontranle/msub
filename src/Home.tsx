@@ -7,6 +7,7 @@ const About = lazy(() => import("./components/about"));
 const Program = lazy(() => import("./components/program"));
 const SummerProgram = lazy(() => import("./components/summer"));
 const Team = lazy(() => import("./components/team"));
+const Footer = lazy(() => import("./components/footer"));
 
 import "./styles/style.css";
 
@@ -19,6 +20,7 @@ export const Home: React.FC = () => {
         <Program />
         <SummerProgram />
         <Team />
+        <Footer />
       </Suspense>
     </>
   );

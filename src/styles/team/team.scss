@@ -1,6 +1,6 @@
 @import "../mixins";
 @import "../variables";
-#team-section {
+#team {
     background-color: $quaternaryColor;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -103,7 +103,7 @@
 
 @media screen and (max-width: 1150px){
 
-    #team-section {
+    #team {
 
     .flex-row-container{
         @include flexContainer(column);

@@ -21,7 +21,7 @@ const coordinators = [
 
 const Team = () => {
   return (
-    <section id="team-section">
+    <section id="team">
       <div id="section-title" className="section-title">
         {" "}
         Meet the Team!{" "}

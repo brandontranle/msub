@@ -1,0 +1,73 @@
+@import "../mixins";
+@import "../variables";
+
+
+#footer{
+    background-color: #0B0B0B;
+    padding: 50px;
+
+    .flex-row{
+        @include flexContainer(row);
+        justify-content: space-between;
+       
+
+    }
+
+    .social-media-icon{
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 50px;
+    }
+
+    .desktop-menu{
+        margin-left: 10%;
+        
+
+     
+
+
+    }
+    .social-media-row{
+        margin-right: 10%;
+        display: flex;
+        flex-direction: row;
+     }
+
+    .flex-menu{
+        margin-left: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: 10%;
+
+        a{
+            color: $primaryColor;
+        }
+       
+        #privacy{
+        
+        }
+
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 0.5rem;
+        padding: clamp(0rem, 0.5rem, 0.5rem);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+
+        &:hover {
+            color: rgb(115, 115, 115);
+        }
+
+        
+
+    }
+
+}
